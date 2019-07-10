@@ -1,0 +1,9 @@
+<% @review.each do |review| %>
+<h2> <%= link_to review.name, review_path(review) %></h2>
+<p><%= link_to "Delete", review_path(review),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+<% end %>
+<p><%= link_to "Back", new_restaurant_path  %></p>
+
+
